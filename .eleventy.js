@@ -6,9 +6,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addWatchTarget("./styles/tailwind.config.js");
   eleventyConfig.addWatchTarget("./styles/tailwind.css");
 
+  // Allows tailwind to build before restarting
   eleventyConfig.setWatchThrottleWaitTime(1000);
 
-  eleventyConfig.addPassthroughCopy("js/index.js");
+  // eleventyConfig.addPassthroughCopy("js/index.js");
 
   eleventyConfig.addShortcode("version", function () {
     return now;
