@@ -9,7 +9,11 @@ module.exports = function (eleventyConfig) {
   // Allows tailwind to build before restarting
   eleventyConfig.setWatchThrottleWaitTime(1000);
 
+  // Use to pass folders or files to _site
+  // EXAMPLES:
   // eleventyConfig.addPassthroughCopy("js/index.js");
+  // eleventyConfig.addPassthroughCopy("js");
+  // eleventyConfig.addPassthroughCopy("images");
 
   eleventyConfig.addShortcode("version", function () {
     return now;
